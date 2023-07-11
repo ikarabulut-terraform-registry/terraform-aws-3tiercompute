@@ -4,13 +4,13 @@ variable "region" {
   type        = string
 }
 
-variable "public-subnet-cidr" {
-  description = "Public subnet CIDR for the public instance"
+variable "public-subnet-id" {
+  description = "Public subnet id for the public instance"
   type        = string
 }
 
-variable "private-subnet-cidr" {
-  description = "Private subnet CIDR for the private app instance"
+variable "private-subnet-id" {
+  description = "Private subnet id for the private app instance"
   type        = string
 }
 

@@ -28,7 +28,7 @@ resource "aws_instance" "public_bastion" {
   key_name      = var.key-name
   vpc_security_group_ids = [var.bastion-sg-id]
 
-  subnet_id     = data.aws_subnet.public-subnet.id
+  subnet_id     = var.public-subnet-id
 
   root_block_device {
     delete_on_termination = "true"
@@ -41,7 +41,7 @@ resource "aws_instance" "private_app_instance" {
   key_name      = var.key-name
   vpc_security_group_ids = [var.app-sg-id]
 
-  subnet_id     = data.aws_subnet.private-subnet.id
+  subnet_id     = var.private-subnet-id
 
   root_block_device {
     delete_on_termination = "true"
