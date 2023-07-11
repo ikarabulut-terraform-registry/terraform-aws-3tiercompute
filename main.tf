@@ -1,17 +1,3 @@
-data "aws_subnet" "public-subnet" {
-  filter {
-    name   = "cidr-block"
-    values = [var.public-subnet-cidr]
-  }
-}
-
-data "aws_subnet" "private-subnet" {
-  filter {
-    name   = "cidr-block"
-    values = [var.private-subnet-cidr]
-  }
-}
-
 data "aws_ami" "amzn-linux-2023-ami" {
   most_recent = true
   owners      = ["amazon"]
